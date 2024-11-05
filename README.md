@@ -2,7 +2,7 @@
 
 # Att-Mod-Panel
 
-A moderation panel for the Vr game A Township Tale includs voice commands spawn menu
+A moderation panel for the Vr game A Township Tale includes voice commands spawn menu
 and more
 
 
