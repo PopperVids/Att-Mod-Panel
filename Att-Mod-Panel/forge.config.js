@@ -1,4 +1,5 @@
 const { FusesPlugin } = require('@electron-forge/plugin-fuses');
+const { default: PublisherGithub } = require('@electron-forge/publisher-github');
 const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 
 module.exports = {
@@ -41,4 +42,18 @@ module.exports = {
       [FuseV1Options.OnlyLoadAppFromAsar]: true,
     }),
   ],
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'PopperVids',
+          name: 'Att-Mod-Panel'
+        },
+        prerelease: false,
+        draft: true,
+        authToken: process.env.GITHUB_TOKEN
+      }
+    }
+  ]
 };
