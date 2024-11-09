@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PopperVids/Att-Mod-Panel.git"
+  },
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -25,11 +29,12 @@
   },
   "keywords": [],
   "author": {
-    "name": "PopperVids",
-    "email": "uribealexis917@gmail.com"
+    "name": "PopperVids"
   },
-  "license": "MIT",
+  "license": "GPL-3.0-only",
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
+    "att-client": "^0.5.3",
+    "electron-squirrel-startup": "^1.0.1",
+    "update-electron-app": "^3.0.0"
   }
 }

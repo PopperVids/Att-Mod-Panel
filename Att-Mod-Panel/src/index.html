@@ -1,12 +1,42 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+</head>
+<body>
+  <nav style="-webkit-app-region: drag">
+    <p id="title">Att Mod Panel</p>
+    <div class="nav-buttons">
+      <button id="minimize"><i class="fa-light fa-window-minimize"></i></button>
+      <button id="maximize"><i class="fa-light fa-square"></i></button>
+      <button id="close"><i class="fa-light fa-xmark"></i></button>
+    </div>
+  </nav>
+  <script src="Function.js"></script>
+</body>
+  <div class="login-container">
+    <form class="login-form">
+      <h2>Login</h2>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      </div>
+      <div class="LogBtn">
+      <button class="submit">Login <i class="fa-solid fa-right-to-bracket"></i></button>
+      </div>
+      <div>
+        <label>
+          Your password is stored locally
+          <div>
+          It is only used for Att-client Functions <i class="fa-solid fa-cube fa-beat"></i>
+          </div>
+        </label>
+      </div>
+    </form>
 </html>
