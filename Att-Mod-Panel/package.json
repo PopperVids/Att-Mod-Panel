@@ -1,40 +1,21 @@
 {
   "name": "att-mod-panel",
-  "productName": "att-mod-panel",
-  "version": "1.0.0",
-  "description": "My Electron application description",
-  "main": "src/index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/PopperVids/Att-Mod-Panel.git"
-  },
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
   "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-shell": "^2"
   },
   "devDependencies": {
-    "@electron-forge/cli": "^7.5.0",
-    "@electron-forge/maker-deb": "^7.5.0",
-    "@electron-forge/maker-rpm": "^7.5.0",
-    "@electron-forge/maker-squirrel": "^7.5.0",
-    "@electron-forge/maker-zip": "^7.5.0",
-    "@electron-forge/plugin-auto-unpack-natives": "^7.5.0",
-    "@electron-forge/plugin-fuses": "^7.5.0",
-    "@electron-forge/publisher-github": "^7.5.0",
-    "@electron/fuses": "^1.8.0",
-    "electron": "33.1.0"
-  },
-  "keywords": [],
-  "author": {
-    "name": "PopperVids"
-  },
-  "license": "GPL-3.0-only",
-  "dependencies": {
-    "att-client": "^0.5.3",
-    "electron-squirrel-startup": "^1.0.1",
-    "update-electron-app": "^3.0.0"
+    "@tauri-apps/cli": "^2",
+    "vite": "^5.3.1",
+    "typescript": "^5.2.2"
   }
 }
