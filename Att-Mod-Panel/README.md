@@ -10,7 +10,7 @@ and more
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://cdn.discordapp.com/attachments/1287303247513649176/1306080689791434852/image.png?ex=67355dee&is=67340c6e&hm=cfbdd6097f84e17051c2a7c602e69c3055d57b32a56316f1c17ce8b05fedac22&)
 
 
 ## Badges
