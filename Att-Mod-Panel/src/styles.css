@@ -140,3 +140,10 @@ button {
   display: flex;
   justify-content: center;
 }
+
+#greet-msg,
+#pass-msg {
+  margin-top: 0; /* Remove any top margin */
+  margin-bottom: 0; /* Remove any bottom margin */
+  padding: 0; /* Remove any padding if necessary */
+}
