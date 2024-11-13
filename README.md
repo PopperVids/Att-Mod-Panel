@@ -5,8 +5,6 @@
 A moderation panel for the Vr game A Township Tale includes voice commands spawn menu
 and more
 
-# Might not work on 32 bit systems due to ELECTRON
-
 
 ## Screenshots
 
