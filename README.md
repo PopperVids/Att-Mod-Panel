@@ -8,7 +8,7 @@ and more
 
 ## Screenshots
 
-![App Screenshot](https://cdn.discordapp.com/attachments/1287303247513649176/1306080689791434852/image.png?ex=67355dee&is=67340c6e&hm=cfbdd6097f84e17051c2a7c602e69c3055d57b32a56316f1c17ce8b05fedac22&)
+![App Screenshot](https://cdn.discordapp.com/attachments/1287303247513649176/1306145677604032543/image.png?ex=67359a74&is=673448f4&hm=af5cd5082dda3e8751c2395cef87591b4e5e86cfe1446cb1d0225e47d6614b21&)
 
 
 ## Badges
