@@ -1,0 +1,1 @@
+Password = pas12 Username = MinerAlex

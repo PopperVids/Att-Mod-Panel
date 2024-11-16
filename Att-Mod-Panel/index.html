@@ -3,19 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Att Mod Panel</title>
     <script type="module" src="/src/main.ts" defer></script>
   </head>
 
   <body>
+    <div class="sidebar">
+      <h2>PLUH</h2>
+      <ul>
+        <li><a href="#Login">Login</a></li>
+        <li><a href="#Panel">Panel</a></li>
+        <li><a href="#Item list">Item list</a></li>
+        </ul>
+        </div>
     <main class="container">
       <h1>Welcome to Att Mod Panel</h1>
       <h3>This project was made with</h3>
 
       <div class="row">
         <a href="https://www.rust-lang.org/learn/get-started" target="_blank">
-          <img src="/src/assets/rust-logo-128x128-blk.png" class="logo rust" alt="rust logo" />
+          <img src="/src/assets/rust-logo-128x128-blk-v2.png" class="logo rust" alt="rust logo" />
         </a>
         <a href="https://tauri.app" target="_blank">
           <img
@@ -33,14 +42,16 @@
         </a>
       </div>
       <p>
-      <p>Passwords will only be stored on local storage</p>
+      <p>Passwords will only be stored on local storage <i class="fa-solid fa-cube fa-beat"></i></p>
       <form class="form-vertical" id="greet-form">
-        <input id="greet-input" placeholder="Enter a Username..." />
-        <input id="Password-input" placeholder="Enter a Password..."/>
+        <input id="greet-input" placeholder="Enter a Username" required autocomplete="off"/>
+        <input id="Password-input" placeholder="Enter a Password" required autocomplete="off"/>
         <button type="submit">Login</button>
       </form>
       <p id="greet-msg"></p>
+      <div>
       <p id="pass-msg"></p>
+      </div>
 
     </main>
   </body>

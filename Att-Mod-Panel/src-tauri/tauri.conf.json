@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "Att-Mod-Panel",
+  "productName": "att-mod-panel",
   "version": "0.1.0",
   "identifier": "com.att-mod-panel.app",
   "build": {
@@ -13,9 +13,10 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "Att mod Panel",
+        "title": "att-mod-panel",
         "width": 900,
-        "height": 560
+        "height": 560,
+        "alwaysOnTop": true
       }
     ],
     "security": {

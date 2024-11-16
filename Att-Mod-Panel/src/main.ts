@@ -23,6 +23,16 @@ async function pass() {
   }
 }
 
+async function Data() { // saves user info for att-client
+  if (userInputEl && passInputEl) {
+
+    await invoke("save_info", {
+      username: userInputEl.value,
+      password: passInputEl.value,
+    });
+  }
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   userInputEl = document.querySelector("#greet-input");
   passInputEl = document.querySelector("#Password-input");
@@ -32,5 +42,6 @@ window.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     user();
     pass();
+    Data();
   });
 });
