@@ -13,7 +13,7 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "att-mod-panel",
+        "title": "Att Mod Panel",
         "width": 900,
         "height": 560,
         "alwaysOnTop": true

@@ -14,7 +14,7 @@ fn login_pass(login_pass: &str) -> String {
 
 #[tauri::command]
 fn save_info(username: &str, password: &str) -> Result<String> {
-    let output = format!("Password = {} Username = {}", password, username);
+    let output = format!("{} {}", password, username);
 
     // Attempt to create and write to the file
     let mut file = File::create("info.txt")?;

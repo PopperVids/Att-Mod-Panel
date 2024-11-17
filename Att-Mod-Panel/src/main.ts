@@ -23,7 +23,7 @@ async function pass() {
   }
 }
 
-async function Data() { // saves user info for att-client
+async function Data() { // saves user info for att-client stored locally ✅
   if (userInputEl && passInputEl) {
 
     await invoke("save_info", {
@@ -32,6 +32,25 @@ async function Data() { // saves user info for att-client
     });
   }
 }
+
+const Panel = document.getElementById("Panel");
+const ItemList = document.getElementById("ItemList");
+const Login = document.getElementById("Login");
+
+Panel?.addEventListener('click', (event) => {
+  event.preventDefault(); // Prevents the default anchor behavior
+  window.location.href = "Panel.html"; // Redirects to the desired page
+});
+
+ItemList?.addEventListener(`click`, (event) => {
+  event.preventDefault();
+  window.location.href = "ItemList.html";
+})
+
+Login?.addEventListener(`click`, (event) => {
+  event.preventDefault();
+  window.location.href = "index.html";
+})
 
 window.addEventListener("DOMContentLoaded", () => {
   userInputEl = document.querySelector("#greet-input");
