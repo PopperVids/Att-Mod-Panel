@@ -1,4 +1,7 @@
 import { invoke } from "@tauri-apps/api/core";
+import { Client } from 'att-client';
+
+import { myUserConfig } from './config';
 
 let userInputEl: HTMLInputElement | null;
 let userMsgEl: HTMLElement | null;
@@ -39,7 +42,7 @@ const Login = document.getElementById("Login");
 
 Panel?.addEventListener('click', (event) => {
   event.preventDefault(); // Prevents the default anchor behavior
-  window.location.href = "Panel.html"; // Redirects to the desired page
+  window.location.href = "CommandRunner.html"; // Redirects to the desired page
 });
 
 ItemList?.addEventListener(`click`, (event) => {

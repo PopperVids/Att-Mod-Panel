@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Att Mod Panel</title>
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>PLUH</h2>
+      <ul>
+        <li><a id="Login" href="#">Login</a></li>
+        <li><a id="Panel" href="#">Command Runner</a></li>
+        <li><a id="ItemList" href="#">Item list</a></li>
+      </ul>
+    </div>
+    <main class="container">
+      <h1>Command Runner</h1>
+      <input id="CommandRunner" placeholder="Command Runner">
+      <button id="run">Run</button>
+
+      <div class="vert">
+        <!-- New element to display the .txt file content -->
+        <div id="fileContent"></div>
+      </div>
+    </main>
+
+    <script>
+      // JavaScript to fetch and display the .txt file content
+      document.addEventListener('DOMContentLoaded', () => {
+        fetch('/path/to/your/file.txt')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('fileContent').textContent = data;
+          })
+          .catch(error => console.error('Error fetching the file:', error));
+      });
+    </script>
+  </body>
+</html>
