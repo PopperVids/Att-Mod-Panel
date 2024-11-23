@@ -1,12 +1,10 @@
 import { invoke } from "@tauri-apps/api/core";
-import { Client } from 'att-client';
-
-import { myUserConfig } from './config';
 
 let userInputEl: HTMLInputElement | null;
 let userMsgEl: HTMLElement | null;
 let passInputEl: HTMLInputElement | null;
-let passMsgEl: HTMLInputElement | null;
+let idInputEL: HTMLInputElement | null;
+let idMsgEL: HTMLInputElement | null;
 
 async function user() {
   if (userMsgEl && userInputEl) {
@@ -17,21 +15,21 @@ async function user() {
   }
 }
 
-async function pass() {
-  if (passMsgEl && passInputEl) {
-    // Ensure the key matches what the Rust command expects
-    passMsgEl.textContent = await invoke("login_pass", {
-      loginPass: passInputEl.value, // Updated key
-    });
-  }
-}
-
 async function Data() { // saves user info for att-client stored locally ✅
-  if (userInputEl && passInputEl) {
+  if (userInputEl && passInputEl && idInputEL) {
 
     await invoke("save_info", {
       username: userInputEl.value,
       password: passInputEl.value,
+      serverid: idInputEL.value,
+    });
+  }
+}
+
+async function id() {
+  if (idInputEL && idMsgEL) {
+    idMsgEL.textContent = await invoke("server_id", {
+      serverId: idInputEL.value,
     });
   }
 }
@@ -58,12 +56,13 @@ Login?.addEventListener(`click`, (event) => {
 window.addEventListener("DOMContentLoaded", () => {
   userInputEl = document.querySelector("#greet-input");
   passInputEl = document.querySelector("#Password-input");
+  idInputEL = document.querySelector("#server-id");
   userMsgEl = document.querySelector("#greet-msg");
-  passMsgEl = document.querySelector("#pass-msg");
+  idMsgEL = document.querySelector("#server-msg");
   document.querySelector("#greet-form")?.addEventListener("submit", (e) => {
     e.preventDefault();
     user();
-    pass();
     Data();
+    id();
   });
 });

@@ -9,13 +9,13 @@ fn login_user(login_user: &str) -> String {
 }
 
 #[tauri::command]
-fn login_pass(login_pass: &str) -> String {
-    format!("with password {}", login_pass)
+fn server_id(server_id: &str) -> String {
+    format!("server id {}", server_id)
 }
 
 #[tauri::command]
-fn save_info(username: &str, password: &str) -> Result<String> {
-    let output = format!("{} {}", username, password);
+fn save_info(username: &str, password: &str, serverid: &str) -> Result<String> {
+    let output = format!("{} {} {}", username, password, serverid);
 
     // Attempt to create and write to the file
     let mut file = File::create("info.txt")?;
@@ -38,7 +38,7 @@ fn save_info(username: &str, password: &str) -> Result<String> {
 pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_shell::init())
-        .invoke_handler(tauri::generate_handler![login_user, login_pass, save_info])
+        .invoke_handler(tauri::generate_handler![login_user, server_id, save_info])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
