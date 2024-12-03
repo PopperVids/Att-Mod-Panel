@@ -8,7 +8,7 @@ and more
 
 ## Screenshots
 
-![App Screenshot](https://drive.google.com/file/d/1nZXUHf7QohTtevpNAm787uVr4bddRVPp/preview)
+![screenshot](imageFolder/screenshot.png)
 
 
 ## Badges
