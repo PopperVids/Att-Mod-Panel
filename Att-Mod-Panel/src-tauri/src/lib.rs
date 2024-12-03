@@ -1,7 +1,7 @@
 use std::fs::File;
 use std::io::Write;
-use tauri::Result;
 use std::process::Command;
+use tauri::Result;
 
 #[tauri::command]
 fn login_user(login_user: &str) -> String {
@@ -23,7 +23,9 @@ fn save_info(username: &str, password: &str, serverid: &str) -> Result<String> {
 
     // Open the file explorer and highlight the file using a system command
     #[cfg(target_os = "windows")]
-    Command::new("explorer").args(&["/select,", "info.txt"]).spawn()?;
+    Command::new("explorer")
+        .args(&["/select,", "info.txt"])
+        .spawn()?;
 
     #[cfg(target_os = "macos")]
     Command::new("open").args(&["-R", "info.txt"]).spawn()?;
@@ -37,6 +39,7 @@ fn save_info(username: &str, password: &str, serverid: &str) -> Result<String> {
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
+        .plugin(tauri_plugin_updater::Builder::new().build())
         .plugin(tauri_plugin_shell::init())
         .invoke_handler(tauri::generate_handler![login_user, server_id, save_info])
         .run(tauri::generate_context!())
