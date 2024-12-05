@@ -9,6 +9,7 @@
     "beforeBuildCommand": "npm run build",
     "frontendDist": "../dist"
   },
+
   "app": {
     "withGlobalTauri": true,
     "windows": [
@@ -24,6 +25,7 @@
     }
   },
   "bundle": {
+    "createUpdaterArtifacts": true,
     "active": true,
     "targets": "all",
     "icon": [
@@ -33,5 +35,14 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ]
-  }
+  },
+
+  "plugins": {
+      "updater": {
+        "pubkey": "CONTENT FROM PUBLICKEY.PEM",
+        "endpoints": [
+          "https://github.com/PopperVids/Att-Mod-Panel/releases"
+        ]
+      }
+    }
 }
