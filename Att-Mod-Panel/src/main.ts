@@ -54,6 +54,7 @@ Login?.addEventListener(`click`, (event) => {
   window.location.href = "index.html";
 })
 
+
 window.addEventListener("DOMContentLoaded", () => {
   userInputEl = document.querySelector("#greet-input");
   passInputEl = document.querySelector("#Password-input");
