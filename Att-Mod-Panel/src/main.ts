@@ -1,4 +1,6 @@
 import { invoke } from "@tauri-apps/api/core";
+import { message } from "@tauri-apps/plugin-dialog";
+import { ask } from '@tauri-apps/plugin-dialog';
 
 
 let userInputEl: HTMLInputElement | null;
@@ -54,6 +56,21 @@ Login?.addEventListener(`click`, (event) => {
   window.location.href = "index.html";
 })
 
+async function checkNodeJsRequirement() {
+  const answer = await ask('Do you want to download node.js? This is required for Att Mod Panel to function.', {
+    title: 'Att Mod Panel',
+    kind: 'warning',
+  });
+
+  // Assuming `ask` returns a boolean
+  if (answer) {
+    console.log('User agreed to download Node.js.');
+    window.open('https://nodejs.org/', '_blank');
+  } else {
+    console.log('User declined to download Node.js.');
+  }
+}
+checkNodeJsRequirement();
 
 window.addEventListener("DOMContentLoaded", () => {
   userInputEl = document.querySelector("#greet-input");
